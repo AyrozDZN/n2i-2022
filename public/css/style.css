@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --black: #110B11;
+    --white: #f4f3ee;
+    --white-75: rgba(244, 243, 238, 0.75);
+    --yellow: #fcaa67;
+    --yellowBlack: #FFA153;
+    --blue: #2daecb;
+    --pink: #ea4c89;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white);
+    overflow-x: hidden;
+}
+
+body::before {
+    position: absolute;
+    content: "";
+    top: 70vh;
+    transform: translate(-50%, -50%);
+    left: 0;
+    width: 500px;
+    height: 500px;
+    background-color: var(--blue);
+    border-radius: 100%;
+    filter: blur(100px);
+    opacity: 50%;
+}
+
+body::after {
+    position: absolute;
+    content: "";
+    top: 30vh;
+    transform: translate(50%, -50%);
+    right: 0;
+    width: 500px;
+    height: 500px;
+    background-color: var(--pink);
+    border-radius: 100%;
+    filter: blur(100px);
+    opacity: 50%;
+}
+
+header {
+    height: 100vh;
+    position: relative;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    box-shadow: 0 110px 100px -100px var(--white) inset; 
+    z-index: 8000;
+    transition: box-shadow .5s ease-in-out;
+}
+
+.scrolled {
+    box-shadow: 0 300px 100px -100px var(--white) inset;
+}
+
+nav .container {
+    width: 100%;
+    padding: 0 6rem;
+    display: flex;
+}
+
+nav .brand {
+    font-size: 1rem;
+    float: left;
+    margin: auto 0;
+}
+
+nav .brand a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+nav .links {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    list-style: none;
+    margin: auto 0;
+    margin-left: auto;
+}
+
+nav .links li a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.header-container {
+    padding: 0 6rem;
+    display: flex;
+    height: 100%;
+}
+
+.header-container .left {
+    width: 50%;
+    margin: auto;
+}
+
+.header-container .left .round-image {
+    position: relative;
+    background-image: url("https://www.sciencesetavenir.fr/assets/img/2018/03/26/cover-r4x3w1000-5ab8c0cc05a01-ruban-sida-sidaction-4-4-millions.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+    width: 80%;
+    aspect-ratio: 1/1;
+}
+
+.header-container .left .round-image::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5%;
+    left: -5%;
+    height: 105%;
+    width: 105%;
+    background-color: var(--black);
+    border-radius: 100%;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 25%;
+}
+
+.header-container .right {
+    width: 50%;
+    margin: auto;
+}
+
+.header-container .right .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--black);
+    margin: 0;
+}
+
+.header-container .right .subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    
+    text-align: center;
+    background-color: var(--yellow);
+    padding: 20px 40px;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 7.5px;
+    transition: all .125s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--yellowBlack);
+    color: var(--white);
+}
+
+section {
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+section .title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--black);
+    margin: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.cards-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    width: 30vw;
+    height: 40vw;
+    background-color: #dedede;
+    border-radius: 16px;
+    transition: all .125s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.025) translateY(-10px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-sm {
+    margin-top: 2.5vw;
+    width: 20vw; 
+    height: 35vw;
+}
+
+.card .img-container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card .img-container img {
+    width: calc(100% - 40px);
+    border-radius: 8px;
+    max-height: 200px;
+}
+
+.card .text-container {
+    padding: 0 20px;
+}
+
+.card .text-container h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section .btn {
+    margin: 0 auto;
+    width: 10vw;
+    z-index: 3;
+}
+
+footer {
+    margin-top: 60px;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 6rem;
+    display: flex;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+footer .left h1 {
+    margin: 0;
+}
+
+footer .left p {
+    margin: 0;
+}
+
+footer .right {
+    margin: auto 0;
+    margin-left: auto;
+}
+
+footer .right .input-container {
+    display: flex;
+    flex-direction: row;
+}
+
+footer .right .input-container input {
+    padding: 10px;
+    width: 300px;
+    border: 0;
+    border-radius: 7.5px 0px 0px 7.5px;
+}
+
+footer .right .input-container .btn {
+    border-radius: 0px 7.5px 7.5px 0px;
+    border: 0;
+}
+
+#about h3 {
+    font-weight: 500;
+    text-align: justify;
+    margin: 30px 0;
+}
+
+.text-container {
+    margin-bottom: 30px;
+}
+
+.text-actor {
+    position: relative;
+}
+
+.text-actor::after {
+    content: "acteur";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    color: var(--yellow);
+    z-index: -1;
+}
+
+@media screen and (max-width: 850px) {
+    .card-sm {
+        display: none;
+    }
+
+    footer .right {
+        display: none;
+    }
+
+    .header-container .left {
+        display: none;
+    }
+    
+    .header-container .right {
+        width: 100%;
+    }
+    
+    nav .links {
+        display: none;
+    }
+
+    .card {
+        width: 80vw;
+        height: 90vw;
+    }
+}

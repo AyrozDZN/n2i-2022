@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SexInfo - N2I|2022</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="brand">
+                    <a href="/"><h1>SexInfo</h1></a>
+                </div>
+                <ul class="links">
+                    <li class="link"><a href="#about">A Propos</a></li>
+                    <li class="link"><a href="#news">Actualité</a></li>
+                    <li class="link"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="header-container">
+            <div class="left">
+                <div class="round-image" onclick="egImgClick()"></div>
+            </div>
+            <div class="right">
+                <h1 class="title">Deviens <span class="text-actor">acteur</span> de ta santé sexuelle par le jeu</h1>
+                <p class="subtitle">Participe à notre serious game et prends en main ta sexualité de façon ludique</p>
+                <a href="/games" class="btn">Jouer</a>
+            </div>
+        </div>
+    </header>
+    <section class="news" id="about">
+        <h1 class="title">A Propos</h1>
+        <div class="text-container">
+            <h3>Sida Info Service a été créée en 1990 au plus fort de l’épidémie de SIDA. Aujourd’hui, nous cumulons plus de 30 ans d'expérience dans les domaines de la lutte contre le VIH, les IST, les hépatites, mais également de la santé sexuelle et de la lutte contre l’homophobie, la transphobie et la sérophobie (discriminations à l’encontre des personnes vivant avec le VIH).</h3>
+            <h3>Rebaptisée “SIS Association” en 2011, la structure a su évoluer avec son temps. Elle a participé à la promotion du dépistage et a accompagné tous les publics, notamment les plus vulnérables face à l’épidémie : homosexuels, migrant.e.s, jeunes, usager.e.s de drogues. Elle a aussi répondu à l’arrivée des co infections avec les hépatites et autres IST.</h3>
+            <h3>Depuis sa fondation, SIS Association s’est inscrite dans la promotion de la santé sexuelle parce que convaincue que la vie sexuelle de chaque personne est un espace intime et singulier et qu’avoir accès à un espace de parole où s’exprimer librement et sans jugement permet de s’épanouir.</h3>
+            <h3>Afin de favoriser l’accès à une information pertinente et adaptée sur la santé sexuelle, nous avons lancé, en 2020, un dispositif d’ écoute baptisé Sexualités Info Santé. Cet espace d’information et d’écoute est également un moyen de prévention en matière de santé sexuelle avec une approche moins médicale et qui n’est pas directement liée au VIH, qui a parfois tendance à faire trop peur.</h3>
+        </div>
+    </section>
+    <section class="news" id="news">
+        <h1 class="title">Actualité</h1>
+        <div class="cards-container">
+            <div class="card card-sm">
+                <div class="img-container">
+                    <img src=<%= Object.entries(articles).reverse()[1][1]["image"]%> alt="">
+                </div>
+                <div class="text-container">
+                    <h1><%= Object.entries(articles).reverse()[1][1]["title"]%></h1>
+                    <p><%= Object.entries(articles).reverse()[1][1]["description"]%></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img-container">
+                    <img src=<%= Object.entries(articles).reverse()[0][1]["image"]%> alt="">
+                </div>
+                <div class="text-container">
+                    <h1><%= Object.entries(articles).reverse()[0][1]["title"]%></h1>
+                    <p><%= Object.entries(articles).reverse()[0][1]["description"]%></p>
+                </div>
+            </div>
+            <div class="card card-sm">
+                <div class="img-container">
+                    <img src=<%= Object.entries(articles).reverse()[2][1]["image"]%> alt="">
+                </div>
+                <div class="text-container">
+                    <h1><%= Object.entries(articles).reverse()[2][1]["title"]%></h1>
+                    <p><%= Object.entries(articles).reverse()[2][1]["description"]%></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="left">
+                <h1>SexInfo</h1>
+                <p>Deviens acteur de ta santé sexuelle par le jeu</p>
+            </div>
+            
+            <div class="right">
+                <div class="input-container" id="contact">
+                    <input type="text" placeholder="Subscribe to the newsletter">
+                    <button class="btn">Envoyer</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

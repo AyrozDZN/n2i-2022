@@ -1,0 +1,44 @@
+html, body{
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+}
+#egg{
+    height: 5vw;
+    width: 5vw;
+    z-index: 9999;
+}
+
+#easteregg{
+    position: absolute;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+
+    clip-path: circle(50% at 50% 50%);
+
+    padding: 2vw;
+    width: 7vw;
+    height: 7vw;
+    /*
+    transition: .2s;
+    */
+}
+
+#easteregg a{
+    height: 3vw;
+    width: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#point{
+    display: none;
+    height: 1vw;
+    width: 1vw;
+    background: red;
+    clip-path: circle(50% at 50% 50%);
+}
